@@ -20,7 +20,7 @@
 const arr = [1, 2, 3, 4, 5, 6];
 
 Array.prototype.myMap = function (callback) {
-    if (typeof (callback) === "Function") {
+    if (typeof (callback) !== "Function") {
         throw new Error("callback is not a function")
     }
     const result = [];
@@ -59,7 +59,7 @@ const result = arr.myMap(transformArray)
 
 
 Array.prototype.myMap2 = function (callback) {
-    if (typeof (callback) === "Function") {
+    if (typeof (callback) !== "function") {
         throw new Error("callback is not a function")
     }
     const result = new Array(this.length);

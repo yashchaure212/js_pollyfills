@@ -1,7 +1,7 @@
 let arr = [1, 2, 3, 4, 5, , 6];
 
 Array.prototype.myFilter = function (callback) {
-    if (typeof (callback) === "Function") {
+    if (typeof (callback) !== "function") {
         throw new Error("callback is not a function");
     }
 
